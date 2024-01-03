@@ -65,7 +65,9 @@ function playGame(playerMove) {
 
   document.querySelector('.js-moves').innerHTML = `
     You 
-      <img class="emoji" src="${playerMove}-emoji.png" alt=""> <img class="emoji" src="${computerMove}-emoji.png" alt=""> Computer`;
+    <img class="emoji" src="Rock-Paper-Scissors/assets/image/${playerMove}-emoji.png" alt="">
+    <img class="emoji" src="Rock-Paper-Scissors/assets/image/${computerMove}-emoji.png" alt=""> Computer`;
+
 }
 
 function updateScoreElement() {
