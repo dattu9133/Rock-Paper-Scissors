@@ -68,8 +68,6 @@ function playGame(playerMove) {
     <img class="emoji" src="assests\\image\\${playerMove}-emoji.png" alt="">
     <img class="emoji" src="assests\\image\\${computerMove}-emoji.png" alt=""> Computer`;
 
-
-
 }
 
 function updateScoreElement() {
