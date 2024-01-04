@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="assests\style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assests/style.css">
+
 </head>
 
 <body>
-  <div class="main">
-    <p class="header">Rock Paper Scissors</p>
-    <button onclick="
-      playGame('rock');
-    " class="icon"><img class="emoji" src="assests\image\rock-emoji.png" alt=""></button>
-
-    <button onclick="
-      playGame('paper');
-    " class="icon"><img class="emoji" src="assests\image\paper-emoji.png" alt=""></button>
-
-    <button onclick="
-      playGame('scissors');
-    " class="icon"><img class="emoji" src="assests\image\scissors-emoji.png" alt=""></button>
-
-    <p class="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score"></p>
-
-    <button onclick="
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-      updateScoreElement();
-    " class="reset-score">Reset Score</button>
+  <div class="container mx-auto  p-0">
+    <div class="main">
+      <p class="header">Rock Paper Scissors</p>
+      <div class="row">
+        <div class="col-md-4">
+          <button onclick="playGame('rock');" class="icon"><img class="emoji" src="assests/image/rock-emoji.png"
+              alt=""></button>
+        </div>
+        <div class="col-md-4">
+          <button onclick="playGame('paper');" class="icon"><img class="emoji" src="assests/image/paper-emoji.png"
+              alt=""></button>
+        </div>
+        <div class="col-md-4">
+          <button onclick="playGame('scissors');" class="icon"><img class="emoji" src="assests/image/scissors-emoji.png"
+              alt=""></button>
+        </div>
+      </div>
+      <p class="js-result"></p>
+      <p class="js-moves"></p>
+      <p class="js-score"></p>
+      <button onclick="resetScore();" class="reset-score">Reset Score</button>
+    </div>
   </div>
 
-  <script src="assests\index.js"></script>
-
+  <script src="assests/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

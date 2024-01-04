@@ -2,7 +2,8 @@ body {
   background-color: rgb(25, 25, 25);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 50px;
+  padding: 20px;
+  font-size: 20px;
 }
 
 .icon {
@@ -12,13 +13,12 @@ body {
   background-color: transparent;
   border-radius: 60px;
   margin-right: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
 .emoji {
   width: 50px;
-
 }
 
 .header {
@@ -32,7 +32,7 @@ body {
 }
 
 .js-score {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .reset-score {
@@ -40,7 +40,8 @@ body {
   padding: 10px 15px;
   border: none;
   border-radius: 2px;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 20px;
   margin-top: 10px;
   cursor: pointer;
   transition: all 0.15s;
@@ -49,15 +50,15 @@ body {
 .reset-score:hover {
   font-weight: 600;
   opacity: 80%;
-  transform: translateY(-2px);
+
 }
 
 .main {
-  margin: 30px auto;
+  margin: 20px auto;
   border: 2px solid white;
   border-radius: 5px;
-  width: fit-content;
-  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
   background-color: black;
-  min-width: 440px;
 }
