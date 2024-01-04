@@ -6,17 +6,6 @@ body {
   font-size: 20px;
 }
 
-.icon {
-  height: 120px;
-  width: 120px;
-  border: 3px solid white;
-  background-color: transparent;
-  border-radius: 60px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
 .emoji {
   width: 50px;
 }
@@ -53,12 +42,25 @@ body {
 
 }
 
+.container {
+  min-width: 100%;
+}
+
 .main {
-  margin: 20px auto;
+  margin: 50px auto;
   border: 2px solid white;
-  border-radius: 5px;
-  width: 100%;
+  border-radius: 15px;
   max-width: 600px;
   padding: 20px;
   background-color: black;
+}
+
+.icon {
+  height: 120px;
+  width: 120px;
+  border: 3px solid white;
+  background-color: transparent;
+  border-radius: 60px;
+  margin: 30px 20px;
+  cursor: pointer;
 }

@@ -9,26 +9,26 @@
 </head>
 
 <body>
-  <div class="container mx-auto  p-0">
-    <div class="main">
+  <div class="container mx-0 p-5">
+    <div class="main w-100">
       <p class="header">Rock Paper Scissors</p>
       <div class="row">
-        <div class="col-md-4">
-          <button onclick="playGame('rock');" class="icon"><img class="emoji" src="assests/image/rock-emoji.png"
+        <div class="col-md-4  text-center">
+          <button onclick="playGame('rock');" class="icon mx-3"><img class="emoji" src="assests/image/rock-emoji.png"
               alt=""></button>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <button onclick="playGame('paper');" class="icon"><img class="emoji" src="assests/image/paper-emoji.png"
               alt=""></button>
         </div>
-        <div class="col-md-4">
-          <button onclick="playGame('scissors');" class="icon"><img class="emoji" src="assests/image/scissors-emoji.png"
-              alt=""></button>
+        <div class="col-md-4  text-center">
+          <button onclick="playGame('scissors');" class="icon mx-3"><img class="emoji"
+              src="assests/image/scissors-emoji.png" alt=""></button>
         </div>
       </div>
-      <p class="js-result"></p>
-      <p class="js-moves"></p>
-      <p class="js-score"></p>
+      <p class="js-result my-3"></p>
+      <p class="js-moves my-3"></p>
+      <p class="js-score my-3"></p>
       <button onclick="resetScore();" class="reset-score">Reset Score</button>
     </div>
   </div>
