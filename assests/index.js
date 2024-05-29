@@ -6,16 +6,15 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
 updateScoreElement();
 
-
 let intervalID;
 let isAutoPlay = false;
+
 function autoPlay() {
   if (!isAutoPlay) {
     document.querySelector('.autoPlay').innerHTML = 'Stop Auto Play';
     intervalID = setInterval(() => playGame(pickComputerMove()), 1000);
     isAutoPlay = true;
-  }
-  else {
+  } else {
     isAutoPlay = false;
     document.querySelector('.autoPlay').innerHTML = 'Auto Play';
     clearInterval(intervalID);
@@ -26,23 +25,22 @@ document.querySelector('.rock-button').addEventListener('click', () => playGame(
 document.querySelector('.paper-button').addEventListener('click', () => playGame('paper'));
 document.querySelector('.scissors-button').addEventListener('click', () => playGame('scissors'));
 
-
 document.body.addEventListener('keydown', (event) => {
-  if (event.key == 'r')
+  if (event.key.toLowerCase() === 'r') {
     playGame('rock');
-  else if (event.key == 'p')
+  } else if (event.key.toLowerCase() === 'p') {
     playGame('paper');
-  else if (event.key = 's') {
+  } else if (event.key.toLowerCase() === 's') {
     playGame('scissors');
-  }
-  else if (event.key == 'a') {
+  } else if (event.key.toLowerCase() === 'a') {
     autoPlay();
+  } else {
+    return;
   }
 });
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
-
   let result = '';
 
   if (playerMove === 'scissors') {
@@ -53,7 +51,6 @@ function playGame(playerMove) {
     } else if (computerMove === 'scissors') {
       result = 'Tie.';
     }
-
   } else if (playerMove === 'paper') {
     if (computerMove === 'rock') {
       result = 'You win.';
@@ -62,7 +59,6 @@ function playGame(playerMove) {
     } else if (computerMove === 'scissors') {
       result = 'You lose.';
     }
-
   } else if (playerMove === 'rock') {
     if (computerMove === 'rock') {
       result = 'Tie.';
@@ -82,33 +78,29 @@ function playGame(playerMove) {
   }
 
   localStorage.setItem('score', JSON.stringify(score));
-
   updateScoreElement();
 
   document.querySelector('.js-result').innerHTML = result;
 
   document.querySelector('.js-moves').innerHTML = `
     You 
-    <img class="emoji" src="assests\\image\\${playerMove}-emoji.png" alt="playerMove">
-    <img class="emoji" src="assests\\image\\${computerMove}-emoji.png" alt="computerMove"> Computer`;
-
+    <img class="emoji" src="assets/image/${playerMove}-emoji.png" alt="${playerMove}">
+    <img class="emoji" src="assets/image/${computerMove}-emoji.png" alt="${computerMove}"> Computer`;
 }
 
 function updateScoreElement() {
-  document.querySelector('.js-score')
-    .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+  document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
 }
 
 function pickComputerMove() {
   const randomNumber = Math.random();
-
   let computerMove = '';
 
-  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+  if (randomNumber < 1 / 3) {
     computerMove = 'rock';
-  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+  } else if (randomNumber < 2 / 3) {
     computerMove = 'paper';
-  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+  } else {
     computerMove = 'scissors';
   }
 
