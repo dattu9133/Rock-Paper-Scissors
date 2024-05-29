@@ -6,11 +6,12 @@ This is an enhanced implementation of the classic Rock-Paper-Scissors game using
 
 1. Clone or download this repository to your local machine.
 2. Open the `index.html` file in your web browser.
-3. Choose your move by clicking on the corresponding emoji button (👊 for Rock, ✋ for Paper, ✌️ for Scissors).
+3. Choose your move by clicking on the corresponding emoji button (👊 for Rock, ✋ for Paper, ✌️ for Scissors) or by pressing the corresponding key on your keyboard (R for Rock, P for Paper, S for Scissors).
 4. The computer's move will be randomly generated.
 5. The result will be displayed on the screen, indicating whether you won, lost, or it was a tie.
 6. The score will be updated accordingly and stored in the browser's `localStorage`.
 7. You can reset the score to zero by clicking the "Reset Score" button.
+8. You can activate AutoPlay, which automatically plays the game every few seconds, by clicking the "AutoPlay" button. Click the button again to stop the AutoPlay.
 
 ### Files and Directory Structure
 
