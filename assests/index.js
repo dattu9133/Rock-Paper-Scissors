@@ -38,6 +38,15 @@ document.body.addEventListener('keydown', (event) => {
   else if (event.key.toLowerCase() == 'a') {
     autoPlay();
   }
+  else if (event.key == 'Backspace') {
+    document.querySelector('.confirm').innerHTML =
+      `Are you sure you want to reset?
+      <button onclick="document.querySelector('.confirm').innerHTML = '';
+      resetScore();" class="mx-3 reset-score">Yes</button>      
+      <button class="reset-score" onclick="document.querySelector('.confirm').innerHTML = '';">No</button>`;
+
+  }
+
   else {
     return;
   }
