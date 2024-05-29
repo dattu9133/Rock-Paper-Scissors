@@ -11,11 +11,13 @@ let intervalID;
 let isAutoPlay = false;
 function autoPlay() {
   if (!isAutoPlay) {
+    document.querySelector('.autoPlay').innerHTML = 'Stop Auto Play';
     intervalID = setInterval(() => playGame(pickComputerMove()), 1000);
     isAutoPlay = true;
   }
   else {
     isAutoPlay = false;
+    document.querySelector('.autoPlay').innerHTML = 'Auto Play';
     clearInterval(intervalID);
   }
 }
@@ -32,6 +34,9 @@ document.body.addEventListener('keydown', (event) => {
     playGame('paper');
   else if (event.key = 's') {
     playGame('scissors');
+  }
+  else if (event.key == 'a') {
+    autoPlay();
   }
 });
 
